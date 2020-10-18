@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{18C7496B-9EDC-4923-8124-1ABA9C777495}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{C43DD97D-0673-4F07-9018-B8BAF48F7C24}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2289,7 +2289,7 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
                 <property
                   dataType="System.String"
                   description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
-                  name="OpenRowset">[DIM_TEMPO_F2]</property>
+                  name="OpenRowset">[DIM_TEMPO_F3]</property>
                 <property
                   dataType="System.String"
                   description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
@@ -2416,7 +2416,7 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
                 <property
                   dataType="System.String"
                   description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
-                  name="OpenRowset">[DIM_PRODUTO]</property>
+                  name="OpenRowset">[DIM_PRODUTO_FATO_3]</property>
                 <property
                   dataType="System.String"
                   description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
@@ -2473,12 +2473,12 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
                   name="Entrada de Destino OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\ETL - CENARIO 3\DIM_METODO_ENVIO.Inputs[Entrada de Destino OLE DB].Columns[Name]"
+                      refId="Package\ETL - CENARIO 3\DIM_METODO_ENVIO.Inputs[Entrada de Destino OLE DB].Columns[PRODUCT_NAME]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="Name"
+                      cachedName="PRODUCT_NAME"
                       externalMetadataColumnId="Package\ETL - CENARIO 3\DIM_METODO_ENVIO.Inputs[Entrada de Destino OLE DB].ExternalColumns[Name]"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Name]" />
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[PRODUCT_NAME]" />
                     <inputColumn
                       refId="Package\ETL - CENARIO 3\DIM_METODO_ENVIO.Inputs[Entrada de Destino OLE DB].Columns[ProductID]"
                       cachedDataType="i4"
@@ -2541,7 +2541,7 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
                 <property
                   dataType="System.String"
                   description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
-                  name="OpenRowset">[DIM_OFERTA_ESPECIAL]</property>
+                  name="OpenRowset">[DIM_SUBCATEGORIA]</property>
                 <property
                   dataType="System.String"
                   description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
@@ -2598,30 +2598,30 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
                   name="Entrada de Destino OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB].Columns[SpecialOfferID]"
-                      cachedDataType="i4"
-                      cachedName="SpecialOfferID"
-                      externalMetadataColumnId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB].ExternalColumns[SpecialOfferID]"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[SpecialOfferID]" />
-                    <inputColumn
-                      refId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB].Columns[Description]"
+                      refId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB].Columns[PRODUCT_SUB_CATEGORY_NAME]"
                       cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Description"
-                      externalMetadataColumnId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB].ExternalColumns[Description]"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Description]" />
+                      cachedLength="50"
+                      cachedName="PRODUCT_SUB_CATEGORY_NAME"
+                      externalMetadataColumnId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB].ExternalColumns[SUBCATEGORY_NAME]"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[PRODUCT_SUB_CATEGORY_NAME]" />
+                    <inputColumn
+                      refId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB].Columns[ProductSubcategoryID]"
+                      cachedDataType="i4"
+                      cachedName="ProductSubcategoryID"
+                      externalMetadataColumnId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB].ExternalColumns[SUBCATEGORY_ID]"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ProductSubcategoryID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB].ExternalColumns[SpecialOfferID]"
-                      dataType="i4"
-                      name="SpecialOfferID" />
-                    <externalMetadataColumn
-                      refId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB].ExternalColumns[Description]"
+                      refId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB].ExternalColumns[SUBCATEGORY_NAME]"
                       dataType="wstr"
-                      length="255"
-                      name="Description" />
+                      length="50"
+                      name="SUBCATEGORY_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB].ExternalColumns[SUBCATEGORY_ID]"
+                      dataType="i4"
+                      name="SUBCATEGORY_ID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2651,11 +2651,11 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
               </outputs>
             </component>
             <component
-              refId="Package\ETL - CENARIO 3\FATO_2"
+              refId="Package\ETL - CENARIO 3\FATO_3"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
               description="Destino OLE DB"
-              name="FATO_2"
+              name="FATO_3"
               usesDispositions="true"
               version="4">
               <properties>
@@ -2666,7 +2666,7 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
                 <property
                   dataType="System.String"
                   description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
-                  name="OpenRowset">[FATO_2]</property>
+                  name="OpenRowset">[FATO_3]</property>
                 <property
                   dataType="System.String"
                   description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
@@ -2692,7 +2692,7 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
                 <property
                   dataType="System.Boolean"
                   description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
-                  name="FastLoadKeepIdentity">true</property>
+                  name="FastLoadKeepIdentity">false</property>
                 <property
                   dataType="System.Boolean"
                   description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
@@ -2708,7 +2708,7 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\ETL - CENARIO 3\FATO_2.Connections[OleDbConnection]"
+                  refId="Package\ETL - CENARIO 3\FATO_3.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-AC6T832.AdventureWorks2019]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-AC6T832.AdventureWorks2019]"
                   description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
@@ -2716,86 +2716,86 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB]"
+                  refId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB]"
                   errorOrTruncationOperation="Inserir"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de Destino OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].Columns[TOTAL_DESCONTO_FORNECIDO]"
-                      cachedDataType="cy"
-                      cachedName="TOTAL_DESCONTO_FORNECIDO"
-                      externalMetadataColumnId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].ExternalColumns[TOTAL_DESCONTO_FORNECIDO]"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[TOTAL_DESCONTO_FORNECIDO]" />
+                      refId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].Columns[QTD_ALTERACOES]"
+                      cachedDataType="i4"
+                      cachedName="QTD_ALTERACOES"
+                      externalMetadataColumnId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].ExternalColumns[QTD_ALTERACOES]"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[QTD_ALTERACOES]" />
                     <inputColumn
-                      refId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].Columns[MEDIA_PCT_DESCONTO]"
+                      refId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].Columns[MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO]"
                       cachedDataType="cy"
-                      cachedName="MEDIA_PCT_DESCONTO"
-                      externalMetadataColumnId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].ExternalColumns[MEDIA_PCT_DESCONTO]"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[MEDIA_PCT_DESCONTO]" />
+                      cachedName="MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO"
+                      externalMetadataColumnId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].ExternalColumns[MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO]"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO]" />
                     <inputColumn
-                      refId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].Columns[ProductID]"
+                      refId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].Columns[ProductID]"
                       cachedDataType="i4"
                       cachedName="ProductID"
-                      externalMetadataColumnId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].ExternalColumns[ProductID]"
+                      externalMetadataColumnId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].ExternalColumns[ProductID]"
                       lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ProductID]" />
                     <inputColumn
-                      refId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].Columns[SpecialOfferID]"
+                      refId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].Columns[ProductSubcategoryID]"
                       cachedDataType="i4"
-                      cachedName="SpecialOfferID"
-                      externalMetadataColumnId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].ExternalColumns[SpecialOfferID]"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[SpecialOfferID]" />
+                      cachedName="ProductSubcategoryID"
+                      externalMetadataColumnId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].ExternalColumns[SUBCATEGORY_ID]"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ProductSubcategoryID]" />
                     <inputColumn
-                      refId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].Columns[ID_TEMPO]"
+                      refId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].Columns[ID_DIM_TEMPO]"
                       cachedDataType="i4"
-                      cachedName="ID_TEMPO"
-                      externalMetadataColumnId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID_TEMPO]"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID_TEMPO]" />
+                      cachedName="ID_DIM_TEMPO"
+                      externalMetadataColumnId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID_TEMPO]"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID_DIM_TEMPO]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID_TEMPO]"
+                      refId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID_TEMPO]"
                       dataType="i4"
                       name="ID_TEMPO" />
                     <externalMetadataColumn
-                      refId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].ExternalColumns[SpecialOfferID]"
-                      dataType="i4"
-                      name="SpecialOfferID" />
-                    <externalMetadataColumn
-                      refId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].ExternalColumns[ProductID]"
+                      refId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].ExternalColumns[ProductID]"
                       dataType="i4"
                       name="ProductID" />
                     <externalMetadataColumn
-                      refId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].ExternalColumns[TOTAL_DESCONTO_FORNECIDO]"
-                      dataType="cy"
-                      name="TOTAL_DESCONTO_FORNECIDO" />
+                      refId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].ExternalColumns[SUBCATEGORY_ID]"
+                      dataType="i4"
+                      name="SUBCATEGORY_ID" />
                     <externalMetadataColumn
-                      refId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB].ExternalColumns[MEDIA_PCT_DESCONTO]"
+                      refId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].ExternalColumns[QTD_ALTERACOES]"
+                      dataType="i4"
+                      name="QTD_ALTERACOES" />
+                    <externalMetadataColumn
+                      refId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB].ExternalColumns[MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO]"
                       dataType="cy"
-                      name="MEDIA_PCT_DESCONTO" />
+                      name="MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\ETL - CENARIO 3\FATO_2.Outputs[Saída de Erro de Destino OLE DB]"
+                  refId="Package\ETL - CENARIO 3\FATO_3.Outputs[Saída de Erro de Destino OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Saída de Erro de Destino OLE DB"
-                  synchronousInputId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB]">
+                  synchronousInputId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ETL - CENARIO 3\FATO_2.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      refId="Package\ETL - CENARIO 3\FATO_3.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\ETL - CENARIO 3\FATO_2.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\ETL - CENARIO 3\FATO_3.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\ETL - CENARIO 3\FATO_2.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      refId="Package\ETL - CENARIO 3\FATO_3.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\ETL - CENARIO 3\FATO_2.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\ETL - CENARIO 3\FATO_3.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2826,23 +2826,9 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\ETL - CENARIO 3\Multicast.Outputs[Multicast Saída 1]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Saída 1"
-                  synchronousInputId="Package\ETL - CENARIO 3\Multicast.Inputs[Multicast Entrada 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
                   refId="Package\ETL - CENARIO 3\Multicast.Outputs[4 de Saída Multicast]"
                   deleteOutputOnPathDetached="true"
                   name="4 de Saída Multicast"
-                  synchronousInputId="Package\ETL - CENARIO 3\Multicast.Inputs[Multicast Entrada 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\ETL - CENARIO 3\Multicast.Outputs[1 de Saída Multicast]"
-                  deleteOutputOnPathDetached="true"
-                  name="1 de Saída Multicast"
                   synchronousInputId="Package\ETL - CENARIO 3\Multicast.Inputs[Multicast Entrada 1]">
                   <externalMetadataColumns />
                 </output>
@@ -2862,10 +2848,25 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
                   <externalMetadataColumns />
                 </output>
                 <output
+                  refId="Package\ETL - CENARIO 3\Multicast.Outputs[7 de Saída Multicast]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="7 de Saída Multicast"
+                  synchronousInputId="Package\ETL - CENARIO 3\Multicast.Inputs[Multicast Entrada 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
                   refId="Package\ETL - CENARIO 3\Multicast.Outputs[5 de Saída Multicast]"
                   dangling="true"
                   deleteOutputOnPathDetached="true"
                   name="5 de Saída Multicast"
+                  synchronousInputId="Package\ETL - CENARIO 3\Multicast.Inputs[Multicast Entrada 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL - CENARIO 3\Multicast.Outputs[1 de Saída Multicast]"
+                  deleteOutputOnPathDetached="true"
+                  name="1 de Saída Multicast"
                   synchronousInputId="Package\ETL - CENARIO 3\Multicast.Inputs[Multicast Entrada 1]">
                   <externalMetadataColumns />
                 </output>
@@ -2896,11 +2897,13 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
                   dataType="System.String"
                   description="O comando SQL a ser executado."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select (sod.UnitPrice*sod.OrderQty) * sod.UnitPriceDiscount AS TOTAL_DESCONTO_FORNECIDO, sod.UnitPriceDiscount AS MEDIA_PCT_DESCONTO,p.ProductID, p.Name, so.SpecialOfferID, so.Description, dtf2.ID as ID_TEMPO
-from Sales.SalesOrderDetail sod
-INNER JOIN Production.Product p ON sod.ProductID = p.ProductID
-INNER JOIN Sales.SpecialOffer so ON so.SpecialOfferID = sod.SpecialOfferID
-INNER JOIN dbo.DIM_TEMPO_F2 dtf2 ON YEAR(so.StartDate) = dtf2.ANO AND MONTH(so.StartDate) = dtf2.MES</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select COUNT(pch.ProductID) AS QTD_ALTERACOES, pch.ProductID, AVG(pch.StandardCost) AS MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO, p.Name AS PRODUCT_NAME, ps.ProductSubcategoryID, ps.Name AS PRODUCT_SUB_CATEGORY_NAME, dtf3.ID AS ID_DIM_TEMPO
+from Production.ProductCostHistory pch
+INNER JOIN Production.Product p ON pch.ProductID = p.ProductID
+INNER JOIN Production.ProductSubcategory ps ON ps.ProductSubcategoryID = p.ProductSubcategoryID
+INNER JOIN DIM_TEMPO_F3 dtf3 ON dtf3.ANO = (select Year(max(pch2.ModifiedDate)) from Production.ProductCostHistory pch2 where ProductID = pch.ProductID)
+and dtf3.MES = (select MONTH(max(pch2.ModifiedDate)) from Production.ProductCostHistory pch2 where ProductID = pch.ProductID)
+GROUP BY pch.ProductID, p.Name, ps.Name, ps.ProductSubcategoryID, dtf3.ID</property>
                 <property
                   dataType="System.String"
                   description="A variável que contém o comando SQL a ser executado."
@@ -2937,32 +2940,13 @@ INNER JOIN dbo.DIM_TEMPO_F2 dtf2 ON YEAR(so.StartDate) = dtf2.ANO AND MONTH(so.S
                   name="Saída de Origem OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Name]"
-                      dataType="wstr"
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[QTD_ALTERACOES]"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Name]"
-                      length="50"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Name]"
-                      name="Name"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[TOTAL_DESCONTO_FORNECIDO]"
-                      dataType="cy"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[TOTAL_DESCONTO_FORNECIDO]"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[TOTAL_DESCONTO_FORNECIDO]"
-                      name="TOTAL_DESCONTO_FORNECIDO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[MEDIA_PCT_DESCONTO]"
-                      dataType="cy"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[MEDIA_PCT_DESCONTO]"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[MEDIA_PCT_DESCONTO]"
-                      name="MEDIA_PCT_DESCONTO"
+                      externalMetadataColumnId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[QTD_ALTERACOES]"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[QTD_ALTERACOES]"
+                      name="QTD_ALTERACOES"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ProductID]"
@@ -2974,66 +2958,85 @@ INNER JOIN dbo.DIM_TEMPO_F2 dtf2 ON YEAR(so.StartDate) = dtf2.ANO AND MONTH(so.S
                       name="ProductID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[SpecialOfferID]"
-                      dataType="i4"
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO]"
+                      dataType="cy"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[SpecialOfferID]"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[SpecialOfferID]"
-                      name="SpecialOfferID"
+                      externalMetadataColumnId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO]"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO]"
+                      name="MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Description]"
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[PRODUCT_NAME]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Description]"
-                      length="255"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Description]"
-                      name="Description"
+                      externalMetadataColumnId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[PRODUCT_NAME]"
+                      length="50"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[PRODUCT_NAME]"
+                      name="PRODUCT_NAME"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID_TEMPO]"
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ProductSubcategoryID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID_TEMPO]"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID_TEMPO]"
-                      name="ID_TEMPO"
+                      externalMetadataColumnId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ProductSubcategoryID]"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ProductSubcategoryID]"
+                      name="ProductSubcategoryID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[PRODUCT_SUB_CATEGORY_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[PRODUCT_SUB_CATEGORY_NAME]"
+                      length="50"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[PRODUCT_SUB_CATEGORY_NAME]"
+                      name="PRODUCT_SUB_CATEGORY_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID_DIM_TEMPO]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID_DIM_TEMPO]"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID_DIM_TEMPO]"
+                      name="ID_DIM_TEMPO"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Name]"
-                      dataType="wstr"
-                      length="50"
-                      name="Name" />
-                    <externalMetadataColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[TOTAL_DESCONTO_FORNECIDO]"
-                      dataType="cy"
-                      name="TOTAL_DESCONTO_FORNECIDO" />
-                    <externalMetadataColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[MEDIA_PCT_DESCONTO]"
-                      dataType="cy"
-                      name="MEDIA_PCT_DESCONTO" />
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[QTD_ALTERACOES]"
+                      dataType="i4"
+                      name="QTD_ALTERACOES" />
                     <externalMetadataColumn
                       refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ProductID]"
                       dataType="i4"
                       name="ProductID" />
                     <externalMetadataColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[SpecialOfferID]"
-                      dataType="i4"
-                      name="SpecialOfferID" />
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO]"
+                      dataType="cy"
+                      name="MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO" />
                     <externalMetadataColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Description]"
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[PRODUCT_NAME]"
                       dataType="wstr"
-                      length="255"
-                      name="Description" />
+                      length="50"
+                      name="PRODUCT_NAME" />
                     <externalMetadataColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID_TEMPO]"
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ProductSubcategoryID]"
                       dataType="i4"
-                      name="ID_TEMPO" />
+                      name="ProductSubcategoryID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[PRODUCT_SUB_CATEGORY_NAME]"
+                      dataType="wstr"
+                      length="50"
+                      name="PRODUCT_SUB_CATEGORY_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID_DIM_TEMPO]"
+                      dataType="i4"
+                      name="ID_DIM_TEMPO" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -3042,42 +3045,42 @@ INNER JOIN dbo.DIM_TEMPO_F2 dtf2 ON YEAR(so.StartDate) = dtf2.ANO AND MONTH(so.S
                   name="Saída de Erro de Origem OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[TOTAL_DESCONTO_FORNECIDO]"
-                      dataType="cy"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[TOTAL_DESCONTO_FORNECIDO]"
-                      name="TOTAL_DESCONTO_FORNECIDO" />
-                    <outputColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[MEDIA_PCT_DESCONTO]"
-                      dataType="cy"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[MEDIA_PCT_DESCONTO]"
-                      name="MEDIA_PCT_DESCONTO" />
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[QTD_ALTERACOES]"
+                      dataType="i4"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[QTD_ALTERACOES]"
+                      name="QTD_ALTERACOES" />
                     <outputColumn
                       refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ProductID]"
                       dataType="i4"
                       lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ProductID]"
                       name="ProductID" />
                     <outputColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Name]"
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO]"
+                      dataType="cy"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO]"
+                      name="MEDIA_DO_VALOR_PADRAO_DO_CUSTO_DO_PRODUTO" />
+                    <outputColumn
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[PRODUCT_NAME]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Name]"
-                      name="Name" />
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[PRODUCT_NAME]"
+                      name="PRODUCT_NAME" />
                     <outputColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[SpecialOfferID]"
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ProductSubcategoryID]"
                       dataType="i4"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[SpecialOfferID]"
-                      name="SpecialOfferID" />
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ProductSubcategoryID]"
+                      name="ProductSubcategoryID" />
                     <outputColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Description]"
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[PRODUCT_SUB_CATEGORY_NAME]"
                       dataType="wstr"
-                      length="255"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Description]"
-                      name="Description" />
+                      length="50"
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[PRODUCT_SUB_CATEGORY_NAME]"
+                      name="PRODUCT_SUB_CATEGORY_NAME" />
                     <outputColumn
-                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID_TEMPO]"
+                      refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID_DIM_TEMPO]"
                       dataType="i4"
-                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID_TEMPO]"
-                      name="ID_TEMPO" />
+                      lineageId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID_DIM_TEMPO]"
+                      name="ID_DIM_TEMPO" />
                     <outputColumn
                       refId="Package\ETL - CENARIO 3\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -3120,8 +3123,8 @@ INNER JOIN dbo.DIM_TEMPO_F2 dtf2 ON YEAR(so.StartDate) = dtf2.ANO AND MONTH(so.S
                   dataType="System.String"
                   description="O comando SQL a ser executado."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select distinct YEAR(StartDate) AS ANO, MONTH(StartDate) AS MES from Sales.SpecialOffer
-ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select distinct YEAR(pch.ModifiedDate) AS ANO, MONTH(pch.ModifiedDate) AS MES from Production.ProductCostHistory pch
+ORDER BY YEAR(pch.ModifiedDate), MONTH(pch.ModifiedDate)</property>
                 <property
                   dataType="System.String"
                   description="A variável que contém o comando SQL a ser executado."
@@ -3224,7 +3227,7 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
           <paths>
             <path
               refId="Package\ETL - CENARIO 3.Paths[1 de Saída Multicast]"
-              endId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB]"
+              endId="Package\ETL - CENARIO 3\FATO_3.Inputs[Entrada de Destino OLE DB]"
               name="1 de Saída Multicast"
               startId="Package\ETL - CENARIO 3\Multicast.Outputs[1 de Saída Multicast]" />
             <path
@@ -3234,7 +3237,7 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
               startId="Package\ETL - CENARIO 3\Multicast.Outputs[2 de Saída Multicast]" />
             <path
               refId="Package\ETL - CENARIO 3.Paths[4 de Saída Multicast]"
-              endId="Package\ETL - CENARIO 3\FATO_2.Inputs[Entrada de Destino OLE DB]"
+              endId="Package\ETL - CENARIO 3\DIM_REGIAO.Inputs[Entrada de Destino OLE DB]"
               name="4 de Saída Multicast"
               startId="Package\ETL - CENARIO 3\Multicast.Outputs[4 de Saída Multicast]" />
             <path
@@ -3271,11 +3274,11 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
         <NodeLayout
           Size="160,42"
           Id="Package\ETL - CENARIO 2"
-          TopLeft="231,202" />
+          TopLeft="236,185" />
         <NodeLayout
           Size="160,42"
           Id="Package\ETL - CENARIO 3"
-          TopLeft="237,304" />
+          TopLeft="236,247" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -3287,7 +3290,11 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
     design-time-name="Package\ETL - CENARIO 1">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\ETL - CENARIO 1\Origem OLE DB 1"
+          TopLeft="669.040959040959,386.833333333333" />
         <NodeLayout
           Size="116,42"
           Id="Package\ETL - CENARIO 1\FATO_1"
@@ -3308,28 +3315,10 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
           Size="120,42"
           Id="Package\ETL - CENARIO 1\Multicast"
           TopLeft="224.657342657343,428.481118881119" />
-        <EdgeLayout
-          Id="Package\ETL - CENARIO 1.Paths[Saída de Origem OLE DB]"
-          TopLeft="285.745337995338,302.833333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,125.647785547786"
-              Start="0,0"
-              End="0,118.147785547786">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,118.147785547786" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="153,42"
+          Id="Package\ETL - CENARIO 1\Destino OLE DB"
+          TopLeft="667.040959040959,530.833333333333" />
         <EdgeLayout
           Id="Package\ETL - CENARIO 1.Paths[Multicast Saída 1]"
           TopLeft="256.657342657343,470.481118881119">
@@ -3361,7 +3350,9 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3395,7 +3386,9 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3417,17 +3410,11 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152,42"
-          Id="Package\ETL - CENARIO 1\Origem OLE DB 1"
-          TopLeft="669.040959040959,386.833333333333" />
-        <NodeLayout
-          Size="153,42"
-          Id="Package\ETL - CENARIO 1\Destino OLE DB"
-          TopLeft="667.040959040959,530.833333333333" />
         <EdgeLayout
           Id="Package\ETL - CENARIO 1.Paths[Saída de Origem OLE DB1]"
           TopLeft="744.290959040959,428.833333333333">
@@ -3447,7 +3434,33 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL - CENARIO 1.Paths[Saída de Origem OLE DB]"
+          TopLeft="285.745337995338,302.833333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,125.647785547786"
+              Start="0,0"
+              End="0,118.147785547786">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,118.147785547786" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3504,15 +3517,59 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
     design-time-name="Package\ETL - CENARIO 2">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="152,42"
-          Id="Package\ETL - CENARIO 2\Origem OLE DB"
-          TopLeft="195.989177489177,60" />
+          Size="116,42"
+          Id="Package\ETL - CENARIO 2\FATO_2"
+          TopLeft="55,377.525474525475" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\ETL - CENARIO 2\DIM_REGIAO"
+          TopLeft="191.557442557442,376" />
         <NodeLayout
           Size="120,42"
           Id="Package\ETL - CENARIO 2\Multicast"
           TopLeft="209.813186813187,227.647785547786" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\ETL - CENARIO 2\DIM_METODO_ENVIO"
+          TopLeft="340.196803196803,376.631368631369" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\ETL - CENARIO 2\Origem OLE DB 1"
+          TopLeft="610.196803196803,75" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\ETL - CENARIO 2\Destino OLE DB"
+          TopLeft="608.196803196803,219" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\ETL - CENARIO 2\Origem OLE DB"
+          TopLeft="195.989177489177,60" />
+        <EdgeLayout
+          Id="Package\ETL - CENARIO 2.Paths[Saída de Origem OLE DB1]"
+          TopLeft="685.446803196803,117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,102"
+              Start="0,0"
+              End="0,94.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,94.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\ETL - CENARIO 2.Paths[Saída de Origem OLE DB]"
           TopLeft="270.901182151182,102">
@@ -3532,21 +3589,11 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="116,42"
-          Id="Package\ETL - CENARIO 2\FATO_2"
-          TopLeft="55,377.525474525475" />
-        <NodeLayout
-          Size="142,42"
-          Id="Package\ETL - CENARIO 2\DIM_REGIAO"
-          TopLeft="191.557442557442,376" />
-        <NodeLayout
-          Size="184,42"
-          Id="Package\ETL - CENARIO 2\DIM_METODO_ENVIO"
-          TopLeft="340.196803196803,376.631368631369" />
         <EdgeLayout
           Id="Package\ETL - CENARIO 2.Paths[4 de Saída Multicast]"
           TopLeft="241.813186813187,269.647785547786">
@@ -3578,41 +3625,9 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL - CENARIO 2.Paths[1 de Saída Multicast]"
-          TopLeft="288.479853479854,269.647785547786">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-25.9224109224117,106.352214452214"
-              Start="0,0"
-              End="-25.9224109224117,98.852214452214">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.380508526561" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39.380508526561"
-                    Point2="0,43.380508526561"
-                    Point3="-4,43.380508526561" />
-                  <mssgle:LineSegment
-                    End="-21.9224109224117,43.380508526561" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-21.9224109224117,43.380508526561"
-                    Point2="-25.9224109224117,43.380508526561"
-                    Point3="-25.9224109224117,47.380508526561" />
-                  <mssgle:LineSegment
-                    End="-25.9224109224117,98.852214452214" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3646,50 +3661,50 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152,42"
-          Id="Package\ETL - CENARIO 2\Origem OLE DB 1"
-          TopLeft="610.196803196803,75" />
-        <NodeLayout
-          Size="153,42"
-          Id="Package\ETL - CENARIO 2\Destino OLE DB"
-          TopLeft="608.196803196803,219" />
         <EdgeLayout
-          Id="Package\ETL - CENARIO 2.Paths[Saída de Origem OLE DB1]"
-          TopLeft="685.446803196803,117">
+          Id="Package\ETL - CENARIO 2.Paths[1 de Saída Multicast]"
+          TopLeft="288.479853479854,269.647785547786">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,102"
+              EndConnector="-25.9224109224117,106.352214452214"
               Start="0,0"
-              End="0,94.5">
+              End="-25.9224109224117,98.852214452214">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,94.5" />
+                    End="0,39.380508526561" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.380508526561"
+                    Point2="0,43.380508526561"
+                    Point3="-4,43.380508526561" />
+                  <mssgle:LineSegment
+                    End="-21.9224109224117,43.380508526561" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.9224109224117,43.380508526561"
+                    Point2="-25.9224109224117,43.380508526561"
+                    Point3="-25.9224109224117,47.380508526561" />
+                  <mssgle:LineSegment
+                    End="-25.9224109224117,98.852214452214" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\ETL - CENARIO 2\Origem OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\ETL - CENARIO 2\FATO_2">
     <Properties>
@@ -3729,39 +3744,43 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL - CENARIO 2\Origem OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\ETL - CENARIO 3">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="153,42"
-          Id="Package\ETL - CENARIO 3\Destino OLE DB"
-          TopLeft="608.196803196803,219" />
+          Size="142,42"
+          Id="Package\ETL - CENARIO 3\DIM_REGIAO"
+          TopLeft="221.557442557442,404" />
         <NodeLayout
-          Size="116,42"
-          Id="Package\ETL - CENARIO 3\FATO_2"
-          TopLeft="55,377.525474525475" />
+          Size="120,42"
+          Id="Package\ETL - CENARIO 3\Multicast"
+          TopLeft="209.813186813187,227.647785547786" />
         <NodeLayout
           Size="184,42"
           Id="Package\ETL - CENARIO 3\DIM_METODO_ENVIO"
-          TopLeft="340.196803196803,376.631368631369" />
-        <NodeLayout
-          Size="142,42"
-          Id="Package\ETL - CENARIO 3\DIM_REGIAO"
-          TopLeft="191.557442557442,376" />
+          TopLeft="392.196803196803,404.631368631369" />
         <NodeLayout
           Size="152,42"
           Id="Package\ETL - CENARIO 3\Origem OLE DB 1"
           TopLeft="610.196803196803,75" />
         <NodeLayout
+          Size="153,42"
+          Id="Package\ETL - CENARIO 3\Destino OLE DB"
+          TopLeft="608.196803196803,219" />
+        <NodeLayout
           Size="152,42"
           Id="Package\ETL - CENARIO 3\Origem OLE DB"
           TopLeft="195.989177489177,60" />
-        <NodeLayout
-          Size="120,42"
-          Id="Package\ETL - CENARIO 3\Multicast"
-          TopLeft="209.813186813187,227.647785547786" />
         <EdgeLayout
           Id="Package\ETL - CENARIO 3.Paths[Saída de Origem OLE DB1]"
           TopLeft="685.446803196803,117">
@@ -3776,74 +3795,6 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,94.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL - CENARIO 3.Paths[1 de Saída Multicast]"
-          TopLeft="288.479853479854,269.647785547786">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-25.9224109224117,106.352214452214"
-              Start="0,0"
-              End="-25.9224109224117,98.852214452214">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.380508526561" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39.380508526561"
-                    Point2="0,43.380508526561"
-                    Point3="-4,43.380508526561" />
-                  <mssgle:LineSegment
-                    End="-21.9224109224117,43.380508526561" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-21.9224109224117,43.380508526561"
-                    Point2="-25.9224109224117,43.380508526561"
-                    Point3="-25.9224109224117,47.380508526561" />
-                  <mssgle:LineSegment
-                    End="-25.9224109224117,98.852214452214" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL - CENARIO 3.Paths[4 de Saída Multicast]"
-          TopLeft="241.813186813187,269.647785547786">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-128.813186813187,107.877688977689"
-              Start="0,0"
-              End="-128.813186813187,100.377688977689">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.5226744270222" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.5226744270222"
-                    Point2="0,37.5226744270222"
-                    Point3="-4,37.5226744270222" />
-                  <mssgle:LineSegment
-                    End="-124.813186813187,37.5226744270222" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-124.813186813187,37.5226744270222"
-                    Point2="-128.813186813187,37.5226744270222"
-                    Point3="-128.813186813187,41.5226744270222" />
-                  <mssgle:LineSegment
-                    End="-128.813186813187,100.377688977689" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3875,31 +3826,91 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\ETL - CENARIO 3.Paths[4 de Saída Multicast]"
+          TopLeft="290.518648018648,269.647785547786">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,134.352214452214"
+              Start="0,0"
+              End="0,126.852214452214">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,126.852214452214" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\ETL - CENARIO 3.Paths[2 de Saída Multicast]"
           TopLeft="297.813186813187,269.647785547786">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="134.383616383616,106.983583083583"
+              EndConnector="186.383616383616,134.983583083583"
               Start="0,0"
-              End="134.383616383616,99.483583083583">
+              End="186.383616383616,127.483583083583">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.2116810725506" />
+                    End="0,42.9508115073332" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,33.2116810725506"
-                    Point2="0,37.2116810725506"
-                    Point3="4,37.2116810725506" />
+                    Point1="0,42.9508115073332"
+                    Point2="0,46.9508115073332"
+                    Point3="4,46.9508115073332" />
                   <mssgle:LineSegment
-                    End="130.383616383616,37.2116810725506" />
+                    End="182.383616383616,46.9508115073332" />
                   <mssgle:CubicBezierSegment
-                    Point1="130.383616383616,37.2116810725506"
-                    Point2="134.383616383616,37.2116810725506"
-                    Point3="134.383616383616,41.2116810725506" />
+                    Point1="182.383616383616,46.9508115073332"
+                    Point2="186.383616383616,46.9508115073332"
+                    Point3="186.383616383616,50.9508115073332" />
                   <mssgle:LineSegment
-                    End="134.383616383616,99.483583083583" />
+                    End="186.383616383616,127.483583083583" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="116,42"
+          Id="Package\ETL - CENARIO 3\FATO_3"
+          TopLeft="51,403.525474525475" />
+        <EdgeLayout
+          Id="Package\ETL - CENARIO 3.Paths[1 de Saída Multicast]"
+          TopLeft="269.813186813187,269.647785547786">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-160.813186813187,133.877688977689"
+              Start="0,0"
+              End="-160.813186813187,126.377688977689">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.9388444888445" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,62.9388444888445"
+                    Point2="0,66.9388444888445"
+                    Point3="-4,66.9388444888445" />
+                  <mssgle:LineSegment
+                    End="-156.813186813187,66.9388444888445" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-156.813186813187,66.9388444888445"
+                    Point2="-160.813186813187,66.9388444888445"
+                    Point3="-160.813186813187,70.9388444888445" />
+                  <mssgle:LineSegment
+                    End="-160.813186813187,126.377688977689" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3911,5 +3922,73 @@ ORDER BY YEAR(StartDate), MONTH(StartDate)</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL - CENARIO 3\DIM_REGIAO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL - CENARIO 3\DIM_METODO_ENVIO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL - CENARIO 3\Origem OLE DB 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL - CENARIO 3\Destino OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL - CENARIO 3\Origem OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL - CENARIO 3\FATO_3">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
